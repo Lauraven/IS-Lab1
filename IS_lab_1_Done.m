@@ -168,3 +168,19 @@ for i = 1:5
     disp(e_test)
 end
 fprintf('testavimo pabaiga\r\n')
+
+%% Papildoma
+fprintf('Naive Bayes mokymo pradžia\r\n')
+% atskirimas
+apple_x1 = x1(T == 1);
+apple_x2 = x2(T == 1);
+pear_x1 = x1(T == -1);
+pear_x2 = x2(T == -1);
+
+% tikimybe
+P_apple = length(apple_x1) / length(T)
+P_pear = length(pear_x1) / length(T)
+
+% mean values
+mean_apple = mean(P_apple)
+mean_pear = mean(P_pear)
